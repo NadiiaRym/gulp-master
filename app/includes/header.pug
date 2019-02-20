@@ -1,0 +1,49 @@
+.header
+  .header__top
+    .wrapper
+      div Подключайся и играй на наших серверах!
+
+      .icon-menu
+        ul
+          li
+            a(href="#")
+              i.icon.icon-fb
+          li
+            a(href="#")
+              i.icon.icon-vk
+          li
+            a(href="#")
+              i.icon.icon-uk-flag
+
+  .wrapper
+    .contacts__top
+        -var contacts = [{name:'Админ:', phone:'+38(068) 333-22-10',phone:'+38(099) 750-50-50'},{name:'По донату:', phone:'067-33-22-180'}]
+        ul
+          each item in contacts
+            li
+              strong=item.name
+              |
+              |#{contacts.phone}
+    
+    .contacts__sk
+      a(class='button' href='google.com') minecraft-km7
+
+
+  .header__menu
+    .wrapper
+      -
+        var menu =[
+          'Главная',
+          'Об игре',
+          'Список серверов',
+          'Наша команда',
+          'Донат'
+        ];
+      ul
+        each item in menu
+          -;
+          li
+            a(href="#")=item
+      
+
+
