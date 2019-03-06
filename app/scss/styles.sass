@@ -103,7 +103,7 @@ body
     .article
       padding-bottom: $gutter*1.5
       .article__top
-        background: green
+        background: linear-gradient($main-color-lighter, $main-color)
         
         height: 90px
 
@@ -115,8 +115,6 @@ body
         margin-left: 5px
         color: #fff
         text-decoration: none
-      .article__img
-        
 .footer__top
   display: flex
   flex-direction: row
@@ -134,7 +132,7 @@ body
   justify-content: space-between
   flex-direction: column
   align-items: center
-  background: $main-color
+  background: linear-gradient($main-color-lighter, $main-color)
   .wrapper.partners
     padding: $gutter/2
     display: flex
@@ -145,3 +143,4 @@ body
 .footer__bottom
   .wrapper
     font-size: 14px
+    padding: $gutter
