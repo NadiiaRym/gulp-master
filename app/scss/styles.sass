@@ -25,11 +25,11 @@ body
     background: url('../img/icon-skype.png')
     width: 18px
     height: 18px
-
 .header-column
   padding: $gutter/2
   display: flex
   flex-direction: column
+  justify-content: center
   &>
   &:first-child
     margin-top: auto
@@ -79,6 +79,8 @@ body
 .contact__title
   display: table-cell
   +propToRem(font-size, 16)
+  text-align: center 
+  vertical-align: top
 .contact__phones
   display: table-row
   float: left
@@ -123,6 +125,7 @@ body
       color: #fff
       +propToRem(font-size, 20)
       justify-content: flex-start
+      padding-top: $gutter
     .phone-list
       justify-content: flex-end
       color: #000000
