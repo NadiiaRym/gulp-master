@@ -1,11 +1,74 @@
 .header
-    &__top
-      background: $main-color
-    &__menu
-      background: linear-gradient($main-color-lighter, $main-color)
+  margin-bottom: $v-step
+  &__top
+    background: $main-color
+    +propToRem(font-size, 16)
+    color: #fff
+    padding: $v-step/2 0
+    text-align: center
+    .wrapper
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      align-items: center
+      position: relative
+      +breakpoint(phablet)
+        text-align: left
+        justify-content: space-between
+  &__menu
+    a
+      display: block
+      +propToRem(font-size, 16)
+      color: #fff
+      text-decoration: none
+      padding: $v-step/4*3
+      font-weight: bold
+      text-align: center
+      &:first-letter
+        text-transform:uppercase
+      &:hover
+        background: rgba(255,255,255, .15)
+    ul
+      display: flex
+      flex-wrap: wrap
+      list-style: none
+      border-left: 1px solid lighten(saturate($main-color, 27.77), 20.39)
+      border-right: 1px solid darken(saturate($main-color, 4.17), 12.16)
+    li
+      flex: 1 1 auto
+      border-right: 1px solid lighten(saturate($main-color, 27.77), 20.39)
+      border-left: 1px solid darken(saturate($main-color, 4.17), 12.16)
+      &:nth-child(3)
+        order: 5
+      &:nth-child(4)
+        order: 5
+      &:nth-child(5)
+        order: 3
 
-.contacts__top
-  background-color: #fff
-  color: $main-color
-.contacts__sk
-.page__navbar
+    background: linear-gradient($main-color-lighter, $main-color)
+.menu
+  display: block
+  & > ul
+    list-style: none
+  & > ul > li
+  display: flex
+  +propToRem(font-size, 20)
+  & > ul > li > ul > li
+    padding-left: 10px
+    line-height: 1
+    list-style: none
+    text-decoration: none
+  & > ul > li > ul > li > a
+    color: #ff0000
+    +propToRem(font-size, 16)
+    padding-left: 10px
+    list-style: none
+    text-decoration: none
+  & > ul > li > a
+    -webkit-any-link
+    color: #010101 
+    cursor: pointer
+    text-decoration: none
+.menu > ul > li
+  border-bottom: 1px solid #e7e7e7
+  line-height: 2.5

@@ -1,49 +1,69 @@
 .header
   .header__top
     .wrapper
-      div Подключайся и играй на наших серверах!
+      div Подключайся и играй на наших серверах!!
 
       .icon-menu
         ul
           li
             a(href="#")
-              i.icon.icon-fb
-          li
-            a(href="#")
               i.icon.icon-vk
           li
             a(href="#")
-              i.icon.icon-uk-flag
-
-  .wrapper
-    .contacts__top
-        -var contacts = [{name:'Админ:', phone:'+38(068) 333-22-10',phone:'+38(099) 750-50-50'},{name:'По донату:', phone:'067-33-22-180'}]
-        ul
-          each item in contacts
-            li
-              strong=item.name
-              |
-              |#{contacts.phone}
-    
-    .contacts__sk
-      a(class='button' href='google.com') minecraft-km7
-
-
-  .header__menu
-    .wrapper
-      -
-        var menu =[
-          'Главная',
-          'Об игре',
-          'Список серверов',
-          'Наша команда',
-          'Донат'
-        ];
-      ul
-        each item in menu
-          -;
+              i.icon.icon-fb
           li
-            a(href="#")=item
-      
-
-
+            a(href="#")
+              i.icon.icon-flag
+  .wrapper
+    .row
+      .column-phablet-1-2.header-column.header-column_logo
+        a.logo(href="#")
+          img(src="img/logo.png" alt="")
+      .column-phablet-1-2.header-column.header-column_info
+        -
+          var contacts = [
+            {
+              title: 'админ',
+              phones: [
+                '+38(068) 333-22-10',
+                '+38(099) 750-50-50'
+              ]
+            },
+            {
+              title: 'донат',
+              phones: [
+                '067-33-22-180'
+              ]
+            }
+          ];
+        .phone-list
+          each item in contacts
+            .contact
+              .contact__title=item.title
+              .contact__phones
+                each phone in item.phones
+                  div
+                    a(href="tel:"+phone.replace(/\,/g,''))=phone
+        div
+            |Скайп:
+            a(href="skype:minecraft-km7") minecraft-km7
+      .column-phablet-1-2.header-column.header-column_btns
+        a.button.m-b-half-step(href="#") Выбрать сервер
+        a.button(href="#") Случайный
+      .column-phablet-1-2.header-column.header-column_img
+        img(src="img/logo-text.png" alt="")
+.header__menu
+  .wrapper
+    -
+      var menu =[
+        'Главная',
+        'Об игре',
+        'Список серверов',
+        'Наша команда',
+        'Донат'
+      ];
+    ul
+      each item in menu
+        -;
+        li
+          a(href="#")=item
