@@ -104,9 +104,7 @@ body
       padding-bottom: $gutter*1.5
       .article__top
         background: linear-gradient($main-color-lighter, $main-color)
-        
         height: 90px
-
       .article__date
         color: #000000
         margin-left: 5px
@@ -116,17 +114,18 @@ body
         color: #fff
         text-decoration: none
 .footer__top
-  display: flex
-  flex-direction: row
-  justify-content: space-between
   background: $secondary-color
-  span
-    color: #fff
-    font-size: 20px
-    justify-content: flex-start
-  .phone-list
-    justify-content: flex-end
-    color: #000000
+  .wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    span
+      color: #fff
+      font-size: 20px
+      justify-content: flex-start
+    .phone-list
+      justify-content: flex-end
+      color: #000000
 .footer__middle
   display: flex
   justify-content: space-between
@@ -136,7 +135,6 @@ body
   .wrapper.partners
     padding: $gutter/2
     display: flex
-    justify-content: space-between
     a
       justify-content: space-between
       padding: $gutter/2
