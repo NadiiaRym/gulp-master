@@ -82,7 +82,7 @@ body
   text-align: center 
   vertical-align: top
 .contact__phones
-  display: table-row
+  display: table-cell
   float: left
   margin-left: 10px
   +propToRem(font-size, 20)
@@ -106,19 +106,24 @@ body
       display: flex
       flex-direction: column
       padding-bottom: $gutter*1.5
-      .article__top
-        background: linear-gradient($main-color-lighter, $main-color)
-        height: 90px
+    .article__top
+      background: linear-gradient($main-color-lighter, $main-color)
+      height: 90px
       .article__date
         color: #000000
         margin-left: 5px
         font-weight: bold
       .article__text
-        margin-left: 5px
         color: #fff
         text-decoration: none
-      .article__img
-        max-width: 100%
+    .article__img
+      max-width: 100%
+      // display: block
+      // width: auto
+      // height: auto
+      // background-size: cover
+      // background-repeat: no-repeat
+      // background-position: center
 .footer__top
   background: $secondary-color
   .wrapper
