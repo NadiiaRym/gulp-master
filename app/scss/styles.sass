@@ -74,7 +74,7 @@ body
     li
       margin-left: 5px
 .contact
-  display: table
+  display: table-row
   color: #0f680e
 .contact__title
   display: table-cell
@@ -103,6 +103,8 @@ body
   .row
     padding-top: $gutter*3
     .article
+      display: flex
+      flex-direction: column
       padding-bottom: $gutter*1.5
       .article__top
         background: linear-gradient($main-color-lighter, $main-color)
@@ -115,6 +117,8 @@ body
         margin-left: 5px
         color: #fff
         text-decoration: none
+      .article__img
+        max-width: 100%
 .footer__top
   background: $secondary-color
   .wrapper
